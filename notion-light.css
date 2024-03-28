@@ -26,7 +26,6 @@
 
     --todo-bg-color: #08f;
     --todo-tick-color: #fff;
-    --todo-checked-color: var(--secondary-text-color);
 
     --search-select-bg-color: #edf3ec;
     --search-select-text-color: #448361;
@@ -140,9 +139,10 @@ code {
 }
 
 #write a {
-    color: var(--secondary-text-color);
+    color: var(--text-color);
     text-decoration: none;
-    border-bottom: 0.05em solid var(--secondary-text-color);
+    border-bottom: 0.05em solid var(--text-color);
+    opacity: 0.7;
 }
 
 h1,
@@ -480,7 +480,6 @@ tt {
     vertical-align: middle;
     position: absolute;
     border: 1px solid var(--text-color);
-    margin-top: 0.3rem;
     margin-left: -1.45rem;
     height: 0.95rem;
     width: 0.95rem;
@@ -499,7 +498,6 @@ tt {
 
 #write .md-task-list-item.task-list-done>p {
     text-decoration: line-through;
-    color: var(--todo-checked-color);
     opacity: 0.7;
 }
 
@@ -507,7 +505,7 @@ tt {
     display: flex;
     align-items: center;
     justify-content: center;
-    content: '✓';
+    content: '✓︎';
     position: absolute;
     top: 0;
     left: 0;

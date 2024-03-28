@@ -24,7 +24,7 @@
     --light-trait-300: #ebebeb;
     --light-trait-400: #ebebeb;
 
-    --todo-bg-color: #2eaadc;
+    --todo-bg-color: #08f;
     --todo-tick-color: #fff;
 
     --search-select-bg-color: #2e443a;
@@ -66,8 +66,8 @@
 
     /* General */
     --font-size: 16px;
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-    --monospace: 'SF Mono Medium', 'Fira Code', 'Cousine', 'Consolas', monospace;
+    --font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    --monospace: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
     --heading-char-color: var(--light-trait-400);
     --color-popover-bg-color: var(--text-color);
     --rawblock-edit-panel-bd: var(--bg-color-dark);
@@ -110,7 +110,6 @@ body {
 }
 
 code {
-
     background-color: var(--code-fence-bg-color);
     padding: 2px 2px 2px 2px;
 }
@@ -142,7 +141,8 @@ code {
 #write a {
     color: var(--text-color);
     text-decoration: none;
-    border-bottom: solid 1px var(--text-color);
+    border-bottom: 0.05em solid var(--text-color);
+    opacity: 0.7;
 }
 
 h1,
@@ -480,7 +480,6 @@ tt {
     vertical-align: middle;
     position: absolute;
     border: 1px solid var(--text-color);
-    /* border-radius: 100%; */
     margin-left: -1.45rem;
     height: 0.95rem;
     width: 0.95rem;
@@ -499,13 +498,14 @@ tt {
 
 #write .md-task-list-item.task-list-done>p {
     text-decoration: line-through;
+    opacity: 0.7;
 }
 
 #write .md-task-list-item>input[checked]::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    content: '✓';
+    content: '✓︎';
     position: absolute;
     top: 0;
     left: 0;
@@ -515,7 +515,6 @@ tt {
     font-size: 0.75em;
     font-weight: 600;
 }
-
 
 /* TODO */
 .md-image>.md-meta {
@@ -542,11 +541,11 @@ tt {
 }
 
 .CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
-    border-left: 2.35px solid var(--code-cursor-color);
+    border-left: 2.75px solid var(--code-cursor-color);
 }
 
 .CodeMirror div.CodeMirror-cursor {
-    border-left: 2.35px solid var(--code-cursor-color);
+    border-left: 2.75px solid var(--code-cursor-color);
 }
 
 
@@ -823,8 +822,7 @@ footer {
     background: inherit;
 }
 
-.megamenu-menu,
-.megamenu-content {
+.megamenu-menu .megamenu-content {
     background: var(--side-bar-bg-color);
     color: var(--text-color);
 }
