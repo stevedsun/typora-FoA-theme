@@ -24,8 +24,9 @@
     --light-trait-300: #37352f;
     --light-trait-400: #37352f;
 
-    --todo-bg-color: #2eaadc;
+    --todo-bg-color: #08f;
     --todo-tick-color: #fff;
+    --todo-checked-color: var(--secondary-text-color);
 
     --search-select-bg-color: #edf3ec;
     --search-select-text-color: #448361;
@@ -34,7 +35,7 @@
     --search-hit-bg-color: #fdebec;
 
     --url-text-color: black;
-    --url-underline-color: #37352f;
+    --url-underline-color: #73726e;
 
     --footnote-text-color: #f7f6f3;
     --footnote-bg-color: #888884;
@@ -66,8 +67,8 @@
 
     /* General */
     --font-size: 16px;
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-    --monospace: 'SF Mono Medium', 'Fira Code', 'Cousine', 'Consolas', monospace;
+    --font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    --monospace: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
     --heading-char-color: var(--light-trait-400);
     --color-popover-bg-color: var(--text-color);
     --rawblock-edit-panel-bd: var(--bg-color-dark);
@@ -139,9 +140,9 @@ code {
 }
 
 #write a {
-    color: var(--text-color);
+    color: var(--secondary-text-color);
     text-decoration: none;
-    border-bottom: solid 1px var(--text-color);
+    border-bottom: 0.05em solid var(--secondary-text-color);
 }
 
 h1,
@@ -498,6 +499,8 @@ tt {
 
 #write .md-task-list-item.task-list-done>p {
     text-decoration: line-through;
+    color: var(--todo-checked-color);
+    opacity: 0.7;
 }
 
 #write .md-task-list-item>input[checked]::before {
@@ -821,8 +824,7 @@ footer {
     background: inherit;
 }
 
-.megamenu-menu,
-.megamenu-content {
+.megamenu-menu .megamenu-content {
     background: var(--side-bar-bg-color);
     color: var(--text-color);
 }
