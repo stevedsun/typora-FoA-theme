@@ -335,8 +335,6 @@ blockquote {
     margin-right: 0px;
     border-left: 4px solid var(--blockquote-accent-color);
     padding: 10px 14px 7px 22px;
-    /* change the quote highlight */
-    background-color: var(--blockquote-bg-color);
 }
 
 blockquote blockquote {
